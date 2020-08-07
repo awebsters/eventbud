@@ -1,0 +1,13 @@
+<resources>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="MY.DIALOG" parent="android:Theme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="200dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/otherText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#B5ADCD"
+            android:padding="4dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="I think we should have fun together at this concert!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            tools:visibility="visible" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/yourText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#7151F2"
+            android:fontFamily="@font/nunito"
+            android:padding="4dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Hi!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

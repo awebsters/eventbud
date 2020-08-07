@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="Chat"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/headerUnderline"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_dashboard"
+        app:layout_constraintStart_toStartOf="@+id/text_dashboard"
+        app:layout_constraintTop_toBottomOf="@+id/text_dashboard"
+        app:srcCompat="@android:color/holo_purple" />
+
+    <TextView
+        android:id="@+id/recentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_semibold_italic"
+        android:text="Recent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/headerUnderline"
+        app:layout_constraintTop_toBottomOf="@+id/headerUnderline" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/users"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/recentLabel"
+        tools:listitem="@layout/message_user_list_view"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

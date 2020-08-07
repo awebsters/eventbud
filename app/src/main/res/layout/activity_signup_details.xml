@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signup_detail_img" />
+
+    <View
+        android:id="@+id/background_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/login_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Let us get to know you!"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_rectangle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:srcCompat="@android:color/holo_purple" />
+
+    <ImageView
+        android:id="@+id/ageImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/age"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="@+id/age"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:srcCompat="@drawable/ic_cake_black_24dp" />
+
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="What is your age?"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ageImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageImage"
+        app:layout_constraintTop_toTopOf="@+id/ageImage" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
+        android:hint="Age"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageLabel" />
+
+    <ImageView
+        android:id="@+id/showImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/show"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="@+id/show"
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        app:srcCompat="@drawable/ic_movie_black_24dp" />
+
+    <TextView
+        android:id="@+id/showLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Your all-time favourite thing to watch?"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/showImage"
+        app:layout_constraintTop_toTopOf="@+id/showImage" />
+
+    <EditText
+        android:id="@+id/show"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:hint="Age"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="@+id/age"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/age"
+        app:layout_constraintTop_toBottomOf="@+id/showLabel" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/bio"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="@+id/bio"
+        app:layout_constraintTop_toBottomOf="@+id/show"
+        app:srcCompat="@drawable/ic_textsms_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Give yourself a bio"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+    <EditText
+        android:id="@+id/bio"
+        android:layout_width="271dp"
+        android:layout_height="70dp"
+
+        android:layout_marginTop="16dp"
+        android:gravity="top|left"
+        android:hint="Age"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="@+id/age"
+        app:layout_constraintStart_toStartOf="@+id/age"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:paddingStart="90dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="90dp"
+        android:paddingBottom="10dp"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

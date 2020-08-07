@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Statistic">
+    <option name="excludedDirectories">
+      <list>
+        <option value="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/google/android/material" />
+      </list>
+    </option>
+  </component>
+</project>

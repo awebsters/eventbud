@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/signup_detail_img" />
+
+        <View
+            android:id="@+id/background_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/login_rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Tell us more about you!"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/background_rectangle" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:srcCompat="@android:color/holo_purple" />
+
+        <TextView
+            android:id="@+id/q1t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Are you into sports?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/q1t">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q2t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Are you physically active?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/q2t">
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q3t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Do you like the outdoors?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q3t">
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q4t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Are you into politics?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q4t">
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q5t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Do you recycle?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q5t">
+
+            <RadioButton
+                android:id="@+id/radioButton10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q6t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Would you rather a night out than a night in?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup5" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q6t">
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Out" />
+
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="In" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q7t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Do you believe that financial\nstability is more important than following your passion?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup6" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q7t">
+
+            <RadioButton
+                android:id="@+id/radioButton14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q8t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Are you more of a night owl rather than a morning person?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup7" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q8t">
+
+            <RadioButton
+                android:id="@+id/radioButton16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q9t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Do you consider yourself artistic?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup8" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q9t">
+
+            <RadioButton
+                android:id="@+id/radioButton18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q10t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_black"
+            android:gravity="center"
+            android:text="Would you rather be smart rather than kind?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup9" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/q1t"
+            app:layout_constraintStart_toStartOf="@+id/q1t"
+            app:layout_constraintTop_toBottomOf="@id/q10t">
+
+            <RadioButton
+                android:id="@+id/radioButton20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/radioButton21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="0"
+                android:text="No" />
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button"
+            android:paddingStart="90dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="90dp"
+            android:paddingBottom="10dp"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

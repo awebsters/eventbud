@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/justin" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="Iris Zhong"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/background_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/background_rectangle" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="19"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toEndOf="@+id/name" />
+
+    <View
+        android:id="@+id/background_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/login_rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/message"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#7151F2"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Message"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/background_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="Going to:"
+        android:textColor="#4e21b8"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/bio"
+        app:layout_constraintTop_toBottomOf="@+id/show" />
+
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nunito"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_rectangle" />
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_grey_500_24dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="Movie or Tv Show:"
+        android:textColor="#4e21b8"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/bio"
+        app:layout_constraintTop_toBottomOf="@+id/bio" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nunito_semibold_italic"
+        android:text="Breaking Bad"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/goingToList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:listitem="@layout/view_profile_event_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/discover2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#b9bab9"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Interested"
+        android:textColor="@android:color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/discover"
+        app:layout_constraintStart_toEndOf="@+id/discover" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_black"
+        android:text="Events"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/headerUnderline"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:srcCompat="@android:color/holo_purple" />
+
+    <Button
+        android:id="@+id/discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#6e40e4"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Discover"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/headerUnderline" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/eventRefresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discover">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/discover"
+            tools:listitem="@layout/event_list_view" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
